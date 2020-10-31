@@ -23,3 +23,9 @@ validation $firstName $pattern
 echo "enter LastName start with capital letter and has minimum 3 character"
 read LastName
 validation $LastName $pattern
+
+echo "enter Email address"
+read email
+pattern="^[a-zA-Z0-9]{1,}([._+-][0-9a-zA-Z]+)*[@]{1}[0-9a-zA-Z]{1,}\.[a-zA-Z]{2,4}([.][a-zA-Z]{2,3}){0,1}$"
+validation $Email $pattern
+
