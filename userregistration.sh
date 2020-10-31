@@ -5,7 +5,7 @@ function validation(){
 	flag=0
 	while [ $flag -eq 0 ]
 	do
-		if [[ $name =~ $pattern ]]
+		if [[ $input =~ $pattern ]]
 		then
 			echo "it is valid"
 			flag=1
@@ -18,11 +18,12 @@ function validation(){
 }
 echo "enter firstName start with capital letter and has minimum 3 character"
 read firstName
-pattern="^[A-Z]{1}[a-z]{2}"
+pattern="^([A-Z]{1})[a-z]{2}"
 validation $firstName $pattern
 
 echo "enter LastName start with capital letter and has minimum 3 character"
 read LastName
+pattern="^([A-Z]{1})[a-z]{2}"
 validation $LastName $pattern
 
 echo "enter Email address"
