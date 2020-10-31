@@ -30,7 +30,12 @@ read email
 pattern="^[a-zA-Z0-9]{1,}([._+-][0-9a-zA-Z]+)*[@]{1}[0-9a-zA-Z]{1,}\.[a-zA-Z]{2,4}([.][a-zA-Z]{2,3}){0,1}$"
 validation $Email $pattern
 
-echo "enter valid mobile number"
+echo "enter valid mobile number with country code"
 read mobilenumber
 pattern="^[0-9]{2}[ ]{1}[0-9]{10}$"
 validation "$mobilenumber $pattern
+
+echo "enter password should minimum of 8 characters"
+read password
+pattern=".{8,}"
+validation $password $pattern
