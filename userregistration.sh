@@ -5,7 +5,7 @@ pattern=$2
 flag=0
 while [ $flag -eq 0 ]
 do
-	if [[ $name =~ $pattern ]]
+	if [[ $input =~ $pattern ]]
 	then
 		echo "it is valid"
 		flag=1
